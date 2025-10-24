@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre Riscos e Recompensas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/images/2-removebg-preview.png" type="image/png">
+    <script src="./scripts/share.js" defer></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="bg-header-gray text-white py-1">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xs">
+                    <span id="topbar-date">Carregando...</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="noticias/sobrenos.html" class="text-xs hover:underline">Sobre</a>
+                    <a href="#contato" class="text-xs hover:underline">Contato</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white border-b border-medium-gray sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <button id="mobile-menu-button" class="mr-4 md:hidden text-header-gray">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                    <a href="#" class="flex items-center">
+                        <img src="./assets/images/2-removebg-preview.png" alt="Logo Apostas em Foco" style="max-width: 50px; max-height: 50px; margin-right: 10px;" loading="lazy">
+                        <span class="text-alert-red font-bold text-2xl mr-1">Entre riscos</span>
+                        <span class="text-header-gray font-bold text-2xl">e recompensas</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#ultimas-noticias" class="text-dark-gray hover:text-alert-red font-medium">Início</a>
+                    <a href="#depoimentos" class="text-dark-gray hover:text-alert-red font-medium">Depoimentos</a>
+                    <a href="#" class="text-dark-gray hover:text-alert-red font-medium">Análises</a>
+                    <a href="#" class="text-dark-gray hover:text-alert-red font-medium">Leis e Regulamentações</a>
+                    <a href="#ajuda-e-apoio" class="text-dark-gray hover:text-alert-red font-medium">Ajuda e Apoio</a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 h-full w-3/4 max-w-xs bg-white z-50 shadow-lg overflow-y-auto">
+        <div class="p-4 border-b border-medium-gray">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center">
+                    <span class="text-alert-red font-bold text-xl mr-1">Apostas</span>
+                    <span class="text-header-gray font-bold text-xl">em Foco</span>
+                </a>
+                <button id="close-mobile-menu" class="text-dark-gray">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="p-4">
+            <ul class="space-y-4">
+                <li><a href="#ultimas-noticias" class="block text-dark-gray hover:text-alert-red font-medium">Início</a></li>
+                <li><a href="#depoimentos" class="block text-dark-gray hover:text-alert-red font-medium">Depoimentos</a></li>
+                <li><a href="#" class="block text-dark-gray hover:text-alert-red font-medium">Análises</a></li>
+                <li><a href="#" class="block text-dark-gray hover:text-alert-red font-medium">Leis e Regulações</a></li>
+                <li><a href="#ajuda-e-apoio" class="block text-dark-gray hover:text-alert-red font-medium">Ajuda e Apoio</a></li>
+                <li class="pt-4 border-t border-medium-gray">
+                    <a href="#sobre" class="block text-dark-gray hover:text-alert-red">Sobre</a>
+                </li>
+                <li><a href="#contato" class="block text-dark-gray hover:text-alert-red">Contato</a></li>
+                <li><a href="#newsletter" class="block text-dark-gray hover:text-alert-red">Newsletter</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden"></div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb mb-4">
+            <a href="#ultimas-noticias" class="hover:text-alert-red">Início</a>
+            <span>/</span>
+            <span>Últimas notícias</span>
+        </div>
+
+        <!-- Featured News -->
+        <section class="mb-10">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2">
+                    <article class="bg-white shadow-sm rounded-sm overflow-hidden">
+                        <a href="./noticias/noticia-principal.html" target="_self" rel="noopener">
+                            <div class="relative h-96">
+                                <img src="./assets/images/Imagem1.jpg" alt="Imagem principal da notícia" class="w-full h-full object-cover object-top rounded-t-sm" loading="lazy">
+                                <div class="absolute top-4 left-4">
+                                    <span class="category-tag alert">Investigação</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h1 class="text-3xl font-bold mb-3">Apostas online: o vício silencioso que já afeta mais de 4 milhões de brasileiros</h1>
+                                <p class="text-dark-gray mb-4">Pesquisa revela que o número de pessoas com problemas relacionados a apostas cresceu 300% nos últimos dois anos, impulsionado pela facilidade de acesso a plataformas online.</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                        
+                                        <span class="text-sm text-dark-gray">Feito Por <strong>Gustavo Henrique</strong> • 11/08/2025 às 18:13</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="space-y-6">
+                    <article class="bg-white shadow-sm rounded-sm overflow-hidden news-card">
+                        <a href="./noticias/noticia-regulamentacao.html" target="_self" rel="noopener">
+                            <div class="relative h-48">
+                                <img src="./assets/images/VIRGINIA-FONSECA.jpg" class="w-full h-full object-cover" alt="Virginia Fonseca" loading="lazy"/>
+                                <div class="absolute top-3 left-3">
+                                    <span class="category-tag alert">Leis e Regulações</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h2 class="text-xl font-bold mb-2">Governo anuncia novas medidas para regulamentar apostas online</h2>
+                                <p class="text-dark-gray text-sm mb-3">Pacote de medidas inclui restrições de publicidade e obrigatoriedade de alertas sobre riscos.</p>
+                                <span class="text-xs text-dark-gray">12/06/2023 às 16:30</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="bg-white shadow-sm rounded-sm overflow-hidden news-card">
+                        <a href="./noticias/Falso-anúncio.html" target="_self" rel="noopener">
+                            <div class="relative h-48">
+                                <img src="./assets/images/DanielAlves.png" class="w-full h-full object-cover" alt="Daniel Alves"/ loading="lazy">
+                                <div class="absolute top-3 left-3">
+                                    <span class="category-tag alert">Falso Anúncio</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h2 class="text-xl font-bold mb-2">Associado a um cassino online e promessas de dinheiro fácil</h2>
+                                <p class="text-dark-gray text-sm mb-3">Um anúncio falso veiculado no Kwai utilizava imagens e voz adulterada com inteligência artificial de Daniel Alves</p>
+                                <span class="text-xs text-dark-gray">11/06/2023 às 10:15</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Author Modal -->
+        <div id="author-modal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center hidden">
+            <div class="bg-white rounded-lg p-6 max-w-lg w-full mx-4 flex flex-col md:flex-row items-center">
+                    <h3 class="text-xl font-bold text-header-gray">Gustavo Henrique</h3>
+                    <p class="text-dark-gray">Idade: 17</p>
+                    <button id="close-author-modal" class="mt-4 bg-alert-red text-white px-4 py-2 rounded hover:bg-red-700">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest News -->
+        <section id="ultimas-noticias" class="mb-10">
+            <h2 class="section-title text-2xl font-bold mb-6">Últimas Notícias</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="bg-white shadow-sm rounded-sm overflow-hidden news-card">
+                    <a href="./noticias/noticia-tatica.html" target="_self" rel="noopener">
+                        <div class="relative h-48">
+                            <img src="./assets/images/estudos.png" class="w-full h-full object-cover" alt="Estudo sobre táticas psicológicas" loading="lazy">
+                            <div class="absolute top-3 left-3">
+                                <span class="category-tag alert">Análises</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2">Estudo revela táticas psicológicas usadas por sites de apostas para viciar usuários</h3>
+                            <p class="text-dark-gray text-sm mb-3">Pesquisadores identificam padrões de design e notificações que estimulam comportamento compulsivo.</p>
+                            <span class="text-xs text-dark-gray">10/06/2023 às 14:20</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white shadow-sm rounded-sm overflow-hidden news-card">
+                    <a href="./noticias/copyright.html" target="_self" rel="noopener">
+                        <div class="relative h-48">
+                            <img src="./assets/images/uso indevido.jpg" alt="Uso indevido de imagem" class="w-full h-full object-cover" loading="lazy"/>
+                            <div class="absolute top-3 left-3">
+                                <span class="category-tag alert">Copyright</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2">Uso indevido de imagens em propagandas de apostas online</h3>
+                            <p class="text-dark-gray text-sm mb-3">Casos envolvendo Daniel Alves, Paolla Oliveira, América FC e outros expõem como plataformas de apostas utilizam imagens sem autorização para atrair usuários.</p>
+                            <span class="text-xs text-dark-gray">09/06/2023 às 11:45</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white shadow-sm rounded-sm overflow-hidden news-card">
+                    <a href="./noticias/A Comissão Parlamentar.html" target="_self" rel="noopener">
+                        <div class="relative h-48">
+                            <img src="./assets/images/cpi-bets-depoimento.jpg" alt="André Holanda Rodrigues Rolim durante depoimento da CPI das Bets" class="w-full h-full object-cover" loading="lazy"/>
+                            <div class="absolute top-3 left-3">
+                                <span class="category-tag alert">Depoimento</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2">Ex-apostador compulsivo relata trajetória de recuperação na CPI das Bets</h3>
+                            <p class="text-dark-gray text-sm mb-3">André Holanda Rodrigues Rolim compartilha sua jornada de reabilitação e alerta para os perigos da ludopatia diante dos senadores.</p>
+                            <span class="text-xs text-dark-gray">24/03/2025 às 14:40</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="depoimentos" class="mb-10">
+            <h2 class="section-title text-2xl font-bold mb-6">Depoimento</h2>
+            <div class="bg-white shadow-sm rounded-sm p-6 mb-6">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <div class="relative h-full min-h-[200px]">
+                            <img src="./assets/images/carlos.jpg" class="object-cover" style="width: 100%; height: 580px; border-radius: 1.1rem;" alt="Carlos, 38 anos - São Paulo" loading="lazy"/>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="relative">
+                            <div class="quote-mark absolute -top-6 left-0">"</div>
+                            <h3 class="text-xl font-bold mb-3">Carlos, 38 anos - São Paulo</h3>
+                            <p class="text-dark-gray mb-4 italic">Comecei apostando pequenas quantias nos finais de semana, mas em poucos meses já estava usando meu salário inteiro. Perdi meu apartamento, meu carro e quase perdi minha família. Só percebi a gravidade quando minha esposa me deu um ultimato. Hoje, após dois anos de tratamento, consigo falar sobre isso para alertar outras pessoas.</p>
+                            <p class="text-sm text-dark-gray">Carlos participa de um grupo de apoio para pessoas com vício em apostas há 18 meses e hoje ajuda outros apostadores a reconhecerem os sinais do vício.</p>
+                            <div class="mt-4">
+                                <a href="./noticias/depoimento_carlos.html" class="text-alert-red hover:underline font-medium">Leia o depoimento completo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video and Infographic Section -->
+        <section id="videos" class="mb-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div>
+                    <h2 class="section-title text-2xl font-bold mb-6">Vídeos</h2>
+                    <div class="bg-white shadow-sm rounded-sm overflow-hidden">
+                        <div class="relative h-64">
+                            <img src="./assets/images/Kf5b8rM8z80-HD.jpg" alt="Thumbnail do vídeo" class="w-full h-full object-cover" loading="lazy"/>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2">O que as BETS fazem com o seu CÉREBRO</h3>
+                            <p class="text-dark-gray text-sm">O Brasil está vivendo uma epidemia de bets. Casas de apostas agora estão presentes até na televisão aberta. Mas qual é o efeito disso tudo no cérebro humano? O que as bets estão fazendo com o seu cérebro para fazer você viciar?</p>
+                            <div class="flex items-center justify-between mt-3">
+                                <a class="text-alert-red font-medium" href="https://www.instagram.com/pedroloos?igsh=MWMydGowMmdoamdpZA==">Créditos-à: Pedro Loos</a>
+                                <span class="text-xs text-dark-gray">Duração: 23:34</span>
+                                <button class="text-alert-red hover:underline font-medium text-sm flex items-center">
+                                    <a class="fas fa-play-circle mr-1" href="https://www.youtube.com/watch?v=Kf5b8rM8z80" ></a>
+                                    <a href="https://www.youtube.com/watch?v=Kf5b8rM8z80" >Assistir</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <a class="bg-white shadow-sm rounded-sm overflow-hidden" href="https://www.youtube.com/watch?v=OD-4tt8pS9w">
+                            <div class="relative h-32">
+                                <img src="./assets/images/oqueevicio.png" alt="Thumbnail do vídeo" class="w-full h-full object-cover" loading="lazy"/>
+                            </div>
+                            <div class="p-3">
+                                <h4 class="font-bold text-sm mb-1">O que é dependência? Porque viciamos?</h4>
+                                <span class="text-xs text-dark-gray">Duração: 7:25</span>
+                            </div>
+                        </a>
+                        <a class="bg-white shadow-sm rounded-sm overflow-hidden" href="https://www.youtube.com/watch?v=WDOyhmBcsGA">
+                            <div class="relative h-32">
+                                <img src="./assets/images/impactoapostas.jpg" alt="Thumbnail do vídeo" class="w-full h-full object-cover" loading="lazy"/>
+                            </div>
+                            <div class="p-3">
+                                <h4 class="font-bold text-sm mb-1">O impacto das apostas esportivas no orçamento das famílias brasileiras</h4>
+                                <span class="text-xs text-dark-gray">Duração: 2:27</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="section-title text-2xl font-bold mb-6">Infográficos</h2>
+                    <div class="bg-white shadow-sm rounded-sm overflow-hidden">
+                        <div class="relative h-96">
+                            <svg class="w-full h-full" viewBox="0 0 500 400" preserveAspectRatio="none">
+                                <rect width="500" height="400" fill="#F5F5F5" />
+                                <text x="250" y="40" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333333">O CRESCIMENTO DO VÍCIO EM APOSTAS NO BRASIL</text>
+                                <g transform="translate(50, 80)">
+                                    <text x="0" y="-10" font-family="Arial" font-size="14" fill="#333333">Número de apostadores com problemas (em milhões)</text>
+                                    <line x1="0" y1="0" x2="0" y2="200" stroke="#BDBDBD" stroke-width="2" />
+                                    <text x="-5" y="5" font-family="Arial" font-size="12" text-anchor="end" fill="#616161">4</text>
+                                    <text x="-5" y="55" font-family="Arial" font-size="12" text-anchor="end" fill="#616161">3</text>
+                                    <text x="-5" y="105" font-family="Arial" font-size="12" text-anchor="end" fill="#616161">2</text>
+                                    <text x="-5" y="155" font-family="Arial" font-size="12" text-anchor="end" fill="#616161">1</text>
+                                    <text x="-5" y="205" font-family="Arial" font-size="12" text-anchor="end" fill="#616161">0</text>
+                                    <line x1="0" y1="200" x2="400" y2="200" stroke="#BDBDBD" stroke-width="2" />
+                                    <g>
+                                        <rect x="50" y="150" width="40" height="50" fill="#D32F2F" />
+                                        <text x="70" y="220" font-family="Arial" font-size="12" text-anchor="middle" fill="#616161">2019</text>
+                                        <text x="70" y="145" font-family="Arial" font-size="12" text-anchor="middle" fill="#616161">1M</text>
+                                    </g>
+                                    <g>
+                                        <rect x="150" y="120" width="40" height="80" fill="#D32F2F" />
+                                        <text x="170" y="220" font-family="Arial" font-size="12" text-anchor="middle" fill="#616161">2020</text>
+                                        <text x="170" y="115" font-family="Arial" font-size="12" text-anchor="middle" fill="#616161">1.6M</text>
+                                    </g>
+                                    <g>
+                                        <rect x="250" y="70" width="40" height="130" fill="#D32F2F" />
+                                        <text x="270" y="220" font-family="Arial" font-size="12" text-anchor="middle" fill="#616161">2021</text>
+                                        <text x="270" y="65" font-family="Arial" font-size="12" text-anchor="middle" fill="#616161">2.6M</text>
+                                    </g>
+                                    <g>
+                                        <rect x="350" y="0" width="40" height="200" fill="#D32F2F" />
+                                        <text x="370" y="220" font-family="Arial" font-size="12" text-anchor="middle" fill="#616161">2022</text>
+                                        <text x="370" y="-5" font-family="Arial" font-size="12" text-anchor="middle" fill="#616161">4M</text>
+                                    </g>
+                                </g>
+                                <g transform="translate(50, 330)">
+                                    <rect x="0" y="0" width="15" height="15" fill="#D32F2F" />
+                                    <text x="25" y="12" font-family="Arial" font-size="12" fill="#333333">300% de aumento em 4 anos</text>
+                                    <rect x="200" y="0" width="15" height="15" fill="#D32F2F" />
+                                    <text x="225" y="12" font-family="Arial" font-size="12" fill="#333333">70% são homens entre 18-35 anos</text>
+                                </g>
+                                <text x="250" y="380" font-family="Arial" font-size="10" text-anchor="middle" fill="#757575">Fonte: Instituto Nacional de Pesquisas sobre Comportamento e Vício, 2023</text>
+                            </svg>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold mb-2">A epidemia silenciosa do vício em apostas</h3>
+                            <p class="text-dark-gray text-sm">Dados mostram crescimento alarmante no número de brasileiros com problemas relacionados a apostas nos últimos anos.</p>
+                            <div class="mt-3">
+                                <a href="#" class="text-alert-red hover:underline font-medium text-sm">Ver infográfico completo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help and Support -->
+        <section id="ajuda-e-apoio" class="mb-10">
+            <h2 class="section-title text-2xl font-bold mb-6">Ajuda e Apoio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white shadow-sm rounded-sm p-5">
+                    <div class="text-alert-red text-3xl mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Linhas de Apoio</h3>
+                    <p class="text-dark-gray text-sm mb-4">Serviços telefônicos gratuitos para apoio imediato a pessoas com problemas relacionados a apostas.</p>
+                    <ul class="space-y-3 mb-4">
+                        <li class="flex items-center">
+                            <div class="text-alert-red mr-2">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span><strong>(53) 3273-6301</strong> - CAPS ZONA NORTE</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="text-alert-red mr-2">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span><strong>188</strong> - Prevenção ao Suicídio</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white shadow-sm rounded-sm p-5">
+                    <div class="text-alert-red text-3xl mb-4">
+                        <i class="fas fa-book-medical"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Recursos e Tratamento</h3>
+                    <p class="text-dark-gray text-sm mb-4">Informações sobre tratamentos disponíveis e recursos para recuperação do vício em apostas.</p>
+                    <ul class="space-y-3 mb-4">
+                        <li class="flex items-center">
+                            <div class="text-alert-red mr-2">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <span>Clínicas especializadas em tratamento</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="text-alert-red mr-2">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <span>Guias de autoajuda para download</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="text-alert-red mr-2">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <span>Consultoria financeira para endividados</span>
+                        </li>
+                    </ul>
+                    <a
+                </div>
+            </div>
+            <div class="bg-alert-red bg-opacity-10 border-l-4 border-alert-red p-4 mt-6">
+                <div class="flex">
+                    <div class="text-alert-red mr-3">
+                        <i class="fas fa-exclamation-circle text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-1">Precisa de ajuda imediata?</h4>
+                        <p class="text-white">Se você ou alguém que você conhece está enfrentando uma crise relacionada ao vício em apostas, não hesite em buscar ajuda. Envie mensagem para o WhatsApp (21) 96635-0669</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="mb-10">
+            <h2 class="section-title text-2xl font-bold mb-6">Sobre</h2>
+            <div class="bg-white shadow-sm rounded-sm p-6">
+                <p class="text-dark-gray mb-4">Apostas em Foco é um portal dedicado à conscientização sobre os perigos das apostas online e jogos de azar. Nosso objetivo é informar, educar e oferecer recursos para aqueles afetados pelo vício em apostas, além de promover um debate público sobre regulamentações e políticas de prevenção.</p>
+                <p class="text-dark-gray mb-4">Nossa equipe é composta por jornalistas investigativos, especialistas em saúde mental e ex-apostadores que compartilham suas experiências para ajudar outros a evitar os mesmos erros.</p>
+                
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+       <section id="contato" class="mb-10">
+    <h2 class="section-title text-2xl font-bold mb-6">Contato</h2>
+    <div class="bg-white shadow-sm rounded-sm p-6">
+        <p class="text-dark-gray mb-4">Entre em contato conosco para compartilhar sua história, tirar dúvidas ou sugerir pautas. Estamos aqui para ajudar!</p>
+        <ul class="space-y-3 mb-4">
+            <li class="flex items-center">
+                <i class="fas fa-envelope text-alert-red mr-3"></i>
+                <span>entreriscoserecompensas@gmail.com</span>
+            </li>
+            <li class="flex items-center">
+                <i class="fas fa-phone-alt text-alert-red mr-3"></i>
+                <span>(11) 3456-7890</span>
+            </li>
+            <li class="flex items-center">
+                <i class="fas fa-map-marker-alt text-alert-red mr-3"></i>
+                <span>São Paulo, SP - Brasil</span>
+            </li>
+        </ul>
+        <a href="mailto:entreriscoserecompensas@gmail.com"
+           class="inline-block bg-alert-red text-white px-4 py-2 rounded-sm font-medium hover:bg-[#b71c1c] focus:bg-[#b71c1c] active:bg-[#b71c1c] focus:outline-none transition-colors background-color 0.3s ease">
+           Enviar mensagem
+        </a>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-header-gray text-white">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center mb-4">
+                        <span class="text-alert-red font-bold text-xl mr-1">Apostas</span>
+                        <span class="font-bold text-xl">em Foco</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-4">Portal de notícias e conscientização sobre os perigos das apostas online e jogos de azar.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/tcc1159123" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/entreriscoserecompensas/" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@desaposte" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Categorias</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#depoimentos" class="text-gray-400 hover:text-white transition-colors">Depoimentos</a></li>
+                        <li><a href="#ajuda-e-apoio" class="text-gray-400 hover:text-white transition-colors">Ajuda e Apoio</a></li>
+                        <li><a href="#investigacoes" class="text-gray-400 hover:text-white transition-colors">Investigações</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Recursos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://pt.quizur.com/quiz/voce-e-viciado-em-apostas-eRu1" class="text-gray-400 hover:text-white transition-colors">Teste: Você é viciado?</a></li>
+                        <li><a href="https://blog.iaapostador.org/post/conheca-o-grupo-de-apoio-para-familiares-de-viciados-em-apostas-do-iaa" class="text-gray-400 hover:text-white transition-colors">Guia para familiares</a></li>
+                        <li><a href="https://unolife.com.br/grupo-de-apoio-para-viciados-em-jogos-de-azar/" class="text-gray-400 hover:text-white transition-colors">Grupos de apoio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-alert-red mt-1 mr-3"></i>
+                            <span class="text-gray-400">entreriscoserecompensas@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-alert-red mt-1 mr-3"></i>
+                            <span class="text-gray-400">(11) 91234-5678</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-alert-red mt-1 mr-3"></i>
+                            <span class="text-gray-400">São Paulo, SP - Brasil</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Apostas em Foco. Todos os direitos reservados.</p>
+                    <div class="flex space-x-4">
+                       <a href="noticias/sobrenos.html" class="text-gray-400 text-sm hover:text-white transition-colors">Sobre nós</a></li>
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Política de Privacidade</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Termos de Uso</a>
+                        <a href="noticias/Autores.html" class="text-gray-400 text-sm hover:text-white transition-colors">Autores do Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    // Atualiza automaticamente a data no fuso horário de Brasília
+    function updateTopbarDate() {
+        const elements = {
+            dateSpan: document.getElementById('topbar-date'),
+            formatter: new Intl.DateTimeFormat('pt-BR', {
+                timeZone: 'America/Sao_Paulo',
+                weekday: 'long',
+                day: '2-digit',
+                month: 'long',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            })
+        };
+
+        if (!elements.dateSpan) return;
+
+        const now = new Date();
+        const formatted = elements.formatter.format(now);
+
+        // Capitaliza a primeira letra do dia e do mês para consistência visual
+        const capitalized = formatted.replace(/\b(\p{L})/gu, char => char.toUpperCase());
+        elements.dateSpan.textContent = capitalized;
+    }
+
+    updateTopbarDate();
+    setInterval(updateTopbarDate, 60 * 1000); // Atualiza a cada minuto
+</script>
+</html>
